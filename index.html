@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<title>Current Weather OOP</title>
+</head>
+<body>
+	<div id="weather" class="container">
+		<div class="row">
+			<div class="col s6 offset-s3">
+				<div class="card-panel red lighten-1">
+					<div class="card-content">
+						<div id="weather" class="row center-align">
+							<h3 id="location" class="bold"></h3>
+							<h1 id="temp"></h1>
+							<h5 id="description"></h5>
+						</div>	
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="classes/weather.js"></script>
+	<script src="classes/ui.js"></script>
+	<script src="classes/ls.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
