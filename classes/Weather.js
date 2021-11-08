@@ -9,4 +9,10 @@ class Weather {
 		const responseData = await response.json();
 		return responseData;
 	}
+
+	changeCity(city) {
+		this.city = city;
+		document.getElementById('city-name').value = "";
+		console.log("click")
+	}
 }
