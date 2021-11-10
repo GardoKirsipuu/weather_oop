@@ -11,6 +11,6 @@ class Weather {
 	}
 
 	changeCity(city){
-		
+		this.city = city;
 	}
 }
