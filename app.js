@@ -14,8 +14,9 @@ const form = document.querySelector('form');
 form.addEventListener('submit', changeCity);
 
 function changeCity(event){
-	const newWeather = new Weather(form.firstElementChild.value);
+	const newWeather = form.firstElementChild.value;
 	weather.changeCity(newWeather);
+	ls.setLocationData(newWeather);
 	getWeather();
 	document.querySelector('#city-name').value = "";
 	event.preventDefault();
