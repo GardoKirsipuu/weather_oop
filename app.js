@@ -1,16 +1,25 @@
+// LS object - for location data
+const ls = new LS();
+// init location data
+const weatherLocation = ls.getLocationData();
 // weather object - init location
-const weather = new Weather('Mustvee');
+const weather = new Weather(weatherLocation);
 // UI object
 const ui = new UI();
-
-const city = document.getElementById('submit-btn');
-const input = document.querySelector('input').value;
-
-console.log(city);
+// init DOM reload event
+document.addEventListener('DOMContentLoaded', getWeather);
 
 // change city and get weather data
-city.addEventListener('click', weather.changeCity());
+const form = document.querySelector('form');
+form.addEventListener('submit', changeCity);
 
+function changeCity(event){
+	const newWeather = new Weather(form.firstElementChild.value);
+	weather.changeCity(newWeather);
+	getWeather();
+	document.querySelector('#city-name').value = "";
+	event.preventDefault();
+}
 
 // get city weather and display it
 function getWeather() {
@@ -20,5 +29,3 @@ function getWeather() {
 	})
 	.catch(error => console.log(error));
 }
-
-document.addEventListener('DOMContentLoaded', getWeather);

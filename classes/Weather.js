@@ -10,9 +10,7 @@ class Weather {
 		return responseData;
 	}
 
-	changeCity(city) {
-		this.city = city;
-		document.getElementById('city-name').value = "";
-		console.log("click")
+	changeCity(city){
+		
 	}
 }
